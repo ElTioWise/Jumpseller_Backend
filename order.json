@@ -1,0 +1,123 @@
+{
+"order": {
+    "id": 1080,
+    "created_at": "2023-02-03 03:56:42 UTC",
+    "completed_at": "2023-02-03 04:00:28 UTC",
+    "status": "Paid",
+    "currency": "CLP",
+    "subtotal": 10000,
+    "tax": 1597,
+    "shipping_tax": 0,
+    "shipping": 0,
+    "shipping_required": false,
+    "total": 10000,
+    "discount": 0,
+    "shipping_discount": 0,
+    "fulfillment_status": null,
+    "shipping_method_id": null,
+    "shipping_service_id": null,
+    "shipping_method_name": null,
+    "payment_method_name": "Pago Manual (Transferencia Bancaria, Cheques, Pedidos por Dinero...)",
+    "payment_method_type": "manual",
+    "payment_information": null,
+    "additional_information": null,
+    "duplicate_url": "https://fixlabs-dev.jumpseller.com/cart/duplicate/7ef1c8dc5405e15bacd4ea340d0f85ac",
+    "recovery_url": null,
+    "review_url": "https://fixlabs-dev.jumpseller.com/orders/1080/review/a4fa2f112acd4001ca4013ca18722ab8",
+    "checkout_url": "https://fixlabs-dev.jumpseller.com/v2/checkout/information/7ef1c8dc5405e15bacd4ea340d0f85ac",
+    "coupons": null,
+    "status_enum": "paid",
+    "promotions": [],
+    "customer": {
+      "id": 9328395,
+      "email": "wiseflame2016@gmail.com",
+      "phone": "962408643",
+      "phone_prefix": "+56",
+      "ip": "179.60.76.163",
+      "fullname": "Adolfo Gonzalez Alfaro"
+    },
+    "shipping_address": null,
+    "billing_address": {
+      "name": "Adolfo",
+      "surname": "Gonzalez Alfaro",
+      "taxid": "20331087-0",
+      "address": "Uno Ote #91 ,colina",
+      "city": "Santiago",
+      "postal": "9340000",
+      "region": "Metropolitana",
+      "country": "Chile",
+      "country_code": "CL",
+      "region_code": "12",
+      "street_number": null,
+      "complement": null,
+      "municipality": "Colina"
+    },
+    "products": [
+      {
+        "id": 17724822,
+        "variant_id": 90269315,
+        "sku": null,
+        "name": "Giftcard (Valor: 10000, Email enviar: alberto, Mensaje: Prueba)",
+        "qty": 1,
+        "price": 10000.0,
+        "tax": 1596.638655462185,
+        "discount": 0.0,
+        "weight": 1.0,
+        "image": "https://images.jumpseller.com/store/fixlabs-dev/17724822/giftcard.png?1675396354",
+        "files": [],
+        "taxes": [
+          {
+            "id": 37242897,
+            "name": "IVA",
+            "rate": "19.0",
+            "fixed": false,
+            "amount": "1596.638",
+            "tax_on_product_price": true
+          }
+        ]
+      }
+    ],
+    "additional_fields": [
+      { "label": "Giro", "value": null, "id": 40966, "area": "shipping" },
+      {
+        "label": "Razón social",
+        "value": null,
+        "id": 40967,
+        "area": "shipping"
+      },
+      { "label": "Giro", "value": null, "id": 40966, "area": "billing" },
+      {
+        "label": "Razón social",
+        "value": null,
+        "id": 40967,
+        "area": "billing"
+      },
+      {
+        "label": "¿ Desea factura&nbsp;?",
+        "value": "No",
+        "id": 41315,
+        "area": "other"
+      }
+    ],
+    "shipping_taxes": [],
+    "source": {
+      "source_name": null,
+      "medium": null,
+      "campaign": null,
+      "referral_url": null,
+      "referral_code": null,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36 OPR/94.0.0.0",
+      "first_page_visited": "https://fixlabs-dev.jumpseller.com/giftcard",
+      "first_page_visited_at": "2023-02-03 03:53:16 UTC",
+      "referral_source": "Directo"
+    },
+    "tracking_url": null,
+    "tracking_company": null,
+    "tracking_number": null,
+    "shipping_option": "no_shipping",
+    "same_day_delivery": false,
+    "shipment_status": "No Aplicable",
+    "shipment_status_enum": "not_applicable",
+    "external_shipping_rate_id": null
+  }
+}
