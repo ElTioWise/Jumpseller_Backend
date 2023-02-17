@@ -13,10 +13,11 @@ app.get('/', (req, res) => {
     res.send('Hola Mundo!');
 });
 let productsId = []
+let products = []
 
 app.post('/api/v1', (req, res) => {
     const customerEmail = req.body.order.customer.email
-    const products = req.body.order.products
+    products = req.body.order.products
     const preguntar = async () =>{
         await products.forEach(e => {
             console.log(`${e.name} tiene el id ${e.id}`)
@@ -24,10 +25,25 @@ app.post('/api/v1', (req, res) => {
         })
     }
     preguntar()
-    console.log(productsId);
+    setTimeout(() => {
+        // console.log(productsId[0]);
+        getValueForId(productsId[0],req.body.order.products)
+        console.log(products[0])
+        createPromotion()
+      }, "3000")
     res.send(`funciona`);
 });
-
+function getValueForId(i,o){
+    products.forEach(e => {
+        return e.id === productsId[0]
+    })
+}
+function createPromotion () {
+    api
+    let dat= new Date();
+    let dat2 = Date.parse(dat);
+    console.log(dat2)
+}
 async function obtenerCategorías (e) {
     await api
         .get(`https://api.jumpseller.com/v1/products/${e}.json?login=59c8deed7a6436f0509b31e98cedd508&authtoken=4515c208fa02f6460a5b775f30519731`)
