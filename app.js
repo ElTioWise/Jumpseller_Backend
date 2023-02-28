@@ -1,19 +1,18 @@
 // Dependencias requeridas
 const express = require('express');
-const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const api = require('axios');
 const nodemailer = require('nodemailer');
-
-//valida que no estemos usando las variables de entorno de un ambiente de producción
-if (process.env.NODE_ENV !== 'production'){
-    require('dotenv').config();
-}
+const bodyParser = require('body-parser');
+const morgan = require('morgan');
 
 //Puerto en el que está corriendo
 app.listen(PORT, ()=> console.log(`Servidor corriendo en el puerto ${PORT}`));
 app.use(bodyParser.json());
+
+
+
 
 //Variables globales
 const login = process.env.LOGIN;
@@ -36,14 +35,14 @@ app.post('/api/v1', (req, res) => {
     })
     //Consulta los ids de los productos que cuentan con la categoría de giftcard
     
-    setTimeout(() => {
-        filterForId()
-        productCreate.forEach(delayLoop(createPromotion,2))//delay en segundos
-    }, "1000")
+    // setTimeout(() => {
+    //     filterForId()
+    //     productCreate.forEach(delayLoop(createPromotion,2))//delay en segundos
+    // }, "1000")
     setTimeout(() => {
         res.send(`${Giftcard}`);
-        enviarMail(Giftcard)
-    },"5000")
+        // enviarMail(Giftcard)
+    },"1000")
 });
 
 //Funciones
@@ -60,7 +59,7 @@ enviarMail = async (data)=> {
     }
     const mensaje = {
         from : 'wiseflame2016@gmail.com',
-        to : 'inmawritter@gmail.com',
+        to : 'wiseflame2016@gmail.com',
         subject : 'Correo de pruebas',
         text : `Envío de correo desde node js utilizando nodemailer, giftcard creadas : ${data}`,
         html : `<ul><li>${data}</li></ul><img src="cid:unique@nodemailer.com"/>`,
