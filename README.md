@@ -15,4 +15,4 @@ Se listan las dependecias que se han instalado en el proyecto y su uso en el mis
 * [Cors](https://www.npmjs.com/package/cors) - Maneja los problemas que pueda ocacionar CORS.
 * [MySQL](https://www.npmjs.com/package/mysql) - Plugin que permite la conexion con la base de datos.
 * [Dotenv](https://www.npmjs.com/package/dotenv) - Plugin que permite manejar las variables del sistema desde un archivo .env
-* [Nodemailer ](#)- Plugin que maneja instancias de envio de correos
+* [Nodemailer ](https://nodemailer.com/about)- Plugin que maneja instancias de envio de correos

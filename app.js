@@ -4,23 +4,26 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const api = require('axios');
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
+
 //valida que no estemos usando las variables de entorno de un ambiente de producción
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 }
+
 //Puerto en el que está corriendo
 app.listen(PORT, ()=> console.log(`Servidor corriendo en el puerto ${PORT}`));
 app.use(bodyParser.json());
+
 //Variables globales
 const login = process.env.LOGIN;
 const token = process.env.TOKEN;
-const urlProducts = process.env.URLPRODUCTS
-const urlPromotions = process.env.URLPROMOTIONS
-let productsId = []
-let products = []
-let productCreate = []
-let Giftcard = []
+const urlProducts = process.env.URLPRODUCTS;
+const urlPromotions = process.env.URLPROMOTIONS;
+let productsId = [];
+let products = [];
+let productCreate = [];
+let Giftcard = [];
 
 //Ent-point Ruta Gatilladora
 app.post('/api/v1', (req, res) => {
@@ -39,20 +42,39 @@ app.post('/api/v1', (req, res) => {
     }, "1000")
     setTimeout(() => {
         res.send(`${Giftcard}`);
+        enviarMail(Giftcard)
     },"5000")
 });
 
 //Funciones
+
 //Enviar mail
-enviarMail = ()=> {
+enviarMail = async (data)=> {
     const config = {
         host : 'smtp.gmail.com',
         port : 587,
         auth : {
-            user : 'ignaciog@fixlabs.com',
-            pass :
+            user : 'wiseflame2016@gmail.com',
+            pass : process.env.GMAIL
         }
     }
+    const mensaje = {
+        from : 'wiseflame2016@gmail.com',
+        to : 'inmawritter@gmail.com',
+        subject : 'Correo de pruebas',
+        text : `Envío de correo desde node js utilizando nodemailer, giftcard creadas : ${data}`,
+        html : `<ul><li>${data}</li></ul><img src="cid:unique@nodemailer.com"/>`,
+        attachments: [
+            {
+                filename: 'test.png',
+                path: './src/images/21_1800x1800.webp',
+                cid: 'unique@nodemailer.com'
+            }
+        ]
+    }
+    const transport = nodemailer.createTransport(config)
+    const info =  await transport.sendMail(mensaje);
+    console.log(info)
 }
 
 //Función de validación de categoría
@@ -79,6 +101,7 @@ async function obtenerCategorías (e) {
             console.log(error)
         })
 }
+//función filtra los productos que tengan el id de la categoría
 function filterForId(){
     productCreate = products.filter(f => {
         if(f.id == productsId[0]){
@@ -86,6 +109,7 @@ function filterForId(){
         }
     })
 }
+//ejecuta un delay de 1 seg en las funciones de tiempo para evitar duplicidad en el nombre de las promociones
 const delayLoop = (e, f) => {
     return (e, f) => {
         setTimeout(() => {
@@ -93,12 +117,14 @@ const delayLoop = (e, f) => {
         }, f * 1000);//tiempo de intervalo para la función
     }
 }
+// obtiene una fecha y la registra tipo string junto con la orden de crear una promoción
 function createPromotion (e) {
     let date= new Date();
     let dateNr = (Date.parse(date));
     let dateFinal = Math.floor(dateNr/1000);
     createGiftcard(e,dateFinal)
 }
+// crea una giftcard mediante api
 function createGiftcard (data,data2) {
         for (let i = 0; i < data.qty; i++) { 
             const estructuraRep = {
