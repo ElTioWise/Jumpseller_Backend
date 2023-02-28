@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const api = require('axios');
+const nodemailer = require('nodemailer')
 //valida que no estemos usando las variables de entorno de un ambiente de producción
 if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
@@ -42,6 +43,18 @@ app.post('/api/v1', (req, res) => {
 });
 
 //Funciones
+//Enviar mail
+enviarMail = ()=> {
+    const config = {
+        host : 'smtp.gmail.com',
+        port : 587,
+        auth : {
+            user : 'ignaciog@fixlabs.com',
+            pass :
+        }
+    }
+}
+
 //Función de validación de categoría
 async function obtenerCategorías (e) {
     await api
