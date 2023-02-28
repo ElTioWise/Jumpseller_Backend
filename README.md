@@ -18,4 +18,3 @@ Se listan las dependecias que se han instalado en el proyecto y su uso en el mis
 * [Bcrypt.js](https://www.npmjs.com/package/bcryptjs) - Plugin que permite el manejo de contraseñas encriptadas.
 * [MySQL](https://www.npmjs.com/package/mysql) - Plugin que permite la conexion con la base de datos.
 * [Dotenv](https://www.npmjs.com/package/dotenv) - Plugin que permite manejar las variables del sistema desde un archivo .env
-* Multer - Multer es un middleware de node.js para manejar datos de varias partes/formularios, que se usa principalmente para cargar archivos. Está escrito en la parte superior del ayudante de camarero para una máxima eficiencia.

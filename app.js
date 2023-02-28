@@ -3,10 +3,18 @@ const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
 const api = require('axios');
+if (process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
 
 app.listen(PORT, ()=> console.log(`Servidor corriendo en el puerto ${PORT}`));
 
 app.use(bodyParser.json());
+
+const login = process.env.LOGIN;
+const token = process.env.TOKEN;
+const urlProducts = 'https://api.jumpseller.com/v1/products/'
+const urlPromotions = 'https://api.jumpseller.com/v1/promotions.json'
 
 // Route
 app.get('/', (req, res) => {
@@ -20,7 +28,6 @@ app.post('/api/v1', (req, res) => {
     products = req.body.order.products
     const preguntar = async () =>{
             products.forEach(e => {
-            console.log(`${e.name} tiene el id ${e.id}`)
             obtenerCategorías(e.id)
         })
     }
@@ -31,10 +38,6 @@ app.post('/api/v1', (req, res) => {
       }, "1000")
     res.send(`funciona`);
 });
-const login = '59c8deed7a6436f0509b31e98cedd508'
-const token = '4515c208fa02f6460a5b775f30519731'
-const urlProducts = 'https://api.jumpseller.com/v1/products/'
-const urlPromotions = 'https://api.jumpseller.com/v1/promotions.json'
 function getValueForId(i,o){
     products.forEach(e => {
         return e.id === productsId[0]
@@ -89,7 +92,7 @@ function createGiftcard (data,data2) {
             "condition_qty": 0,
             "quantity_x": 0,
             "type": "fix",
-            "discount_amount_fix": 10000,
+            "discount_amount_fix": `${data.price}`,
             "discount_amount_percent": 0,
             "lasts": "none",
             "begins_at": "string",
@@ -138,7 +141,6 @@ function createGiftcard (data,data2) {
         .post(`${urlPromotions}?login=${login}&authtoken=${token}`,estructura)
         .then(res =>{
             console.log("funcionó")
-            console.log(res.data)
         })
         .catch(err => {
             if(err.response.status == 400){
