@@ -1,18 +1,34 @@
-// Dependencias requeridas
+require('dotenv').config()
 const express = require('express');
-const PORT = process.env.PORT || 3000;
+const cors = require('cors');
+const morganBody = require("morgan-body")
+const loggerStream = require("./utils/handleLogger")
+const dbConnect = require('./config/mongo')
 const app = express();
-const api = require('axios');
+
+app.use(cors())
+app.use(express.json())
+
+morganBody(app,{
+    noColors:true,
+    stream: loggerStream,
+    skip : function (req, res){
+        return res.statusCode < 400
+    }
+})
+
+const PORT = process.env.PORT || 3000;
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const morgan = require('morgan');
 
-//Puerto en el que está corriendo
+const api = require('axios');
+
+//Rutas
+app.use("/api", require("./routes"))
+
 app.listen(PORT, ()=> console.log(`Servidor corriendo en el puerto ${PORT}`));
-app.use(bodyParser.json());
 
-
-
+dbConnect()
 
 //Variables globales
 const login = process.env.LOGIN;
