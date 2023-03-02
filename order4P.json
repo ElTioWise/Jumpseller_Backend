@@ -1,0 +1,207 @@
+{
+  "order": {
+    "id": 1092,
+    "created_at": "2023-02-27 21:10:06 UTC",
+    "completed_at": "2023-02-28 00:27:34 UTC",
+    "status": "Paid",
+    "currency": "CLP",
+    "subtotal": 87250,
+    "tax": 13931,
+    "shipping_tax": 0,
+    "shipping": 0,
+    "shipping_required": true,
+    "total": 87250,
+    "discount": 0,
+    "shipping_discount": 0,
+    "fulfillment_status": null,
+    "shipping_method_id": 409347,
+    "shipping_service_id": null,
+    "shipping_method_name": "Correo Ordinario",
+    "payment_method_name": "Pago Manual (Transferencia Bancaria, Cheques, Pedidos por Dinero...)",
+    "payment_method_type": "manual",
+    "payment_information": null,
+    "additional_information": null,
+    "duplicate_url": "https://fixlabs-dev.jumpseller.com/cart/duplicate/12d24801dd9299b7adec0c2fc91b0d60",
+    "recovery_url": null,
+    "review_url": "https://fixlabs-dev.jumpseller.com/orders/1092/review/035216b66428332916476fa0c654fedf",
+    "checkout_url": "https://fixlabs-dev.jumpseller.com/v2/checkout/information/12d24801dd9299b7adec0c2fc91b0d60",
+    "coupons": null,
+    "status_enum": "paid",
+    "promotions": [],
+    "customer": {
+      "id": 9328395,
+      "email": "wiseflame2016@gmail.com",
+      "phone": "962408643",
+      "phone_prefix": "+56",
+      "ip": "179.60.76.163",
+      "fullname": "Adolfo Gonzalez Alfaro"
+    },
+    "shipping_address": {
+      "name": "Adolfo",
+      "surname": "Gonzalez Alfaro",
+      "address": "Uno Ote #91 ,colina",
+      "city": "Santiago",
+      "postal": "9340000",
+      "region": "Metropolitana",
+      "country": "Chile",
+      "country_code": "CL",
+      "region_code": "12",
+      "street_number": null,
+      "complement": null,
+      "latitude": -33.2293,
+      "longitude": -70.6884,
+      "municipality": "Colina"
+    },
+    "billing_address": {
+      "name": "Adolfo",
+      "surname": "Gonzalez Alfaro",
+      "taxid": "20331087-0",
+      "address": "Uno Ote #91 ,colina",
+      "city": "Santiago",
+      "postal": "9340000",
+      "region": "Metropolitana",
+      "country": "Chile",
+      "country_code": "CL",
+      "region_code": "12",
+      "street_number": null,
+      "complement": null,
+      "municipality": "Colina"
+    },
+    "products": [
+      {
+        "id": 17724822,
+        "variant_id": 90269315,
+        "sku": null,
+        "name": "Giftcard (Valor: 10000, Email enviar: Alberto@gmail.com, Mensaje: prueba de alberto)",
+        "qty": 1,
+        "price": 10000.0,
+        "tax": 1596.638655462185,
+        "discount": 0.0,
+        "weight": 1.0,
+        "image": "https://images.jumpseller.com/store/fixlabs-dev/17724822/giftcard.png?1675396354",
+        "files": [],
+        "taxes": [
+          {
+            "id": 39645016,
+            "name": "IVA",
+            "rate": "19.0",
+            "fixed": false,
+            "amount": "1596.638",
+            "tax_on_product_price": true
+          }
+        ]
+      },
+      {
+        "id": 17724822,
+        "variant_id": 90269317,
+        "sku": null,
+        "name": "Giftcard (Valor: 30000, Email enviar: rogelio@gmail.com, Mensaje: prueba de rogelio)",
+        "qty": 1,
+        "price": 30000.0,
+        "tax": 4789.915966386555,
+        "discount": 0.0,
+        "weight": 1.0,
+        "image": "https://images.jumpseller.com/store/fixlabs-dev/17724822/giftcard.png?1675396354",
+        "files": [],
+        "taxes": [
+          {
+            "id": 39645017,
+            "name": "IVA",
+            "rate": "19.0",
+            "fixed": false,
+            "amount": "4789.915",
+            "tax_on_product_price": true
+          }
+        ]
+      },
+      {
+        "id": 17724822,
+        "variant_id": 90269316,
+        "sku": null,
+        "name": "Giftcard (Valor: 20000, Email enviar: andres@gmail.com, Mensaje: prueba de andres)",
+        "qty": 2,
+        "price": 20000.0,
+        "tax": 3193.27731092437,
+        "discount": 0.0,
+        "weight": 1.0,
+        "image": "https://images.jumpseller.com/store/fixlabs-dev/17724822/giftcard.png?1675396354",
+        "files": [],
+        "taxes": [
+          {
+            "id": 39645018,
+            "name": "IVA",
+            "rate": "19.0",
+            "fixed": false,
+            "amount": "3193.277",
+            "tax_on_product_price": true
+          }
+        ]
+      },
+      {
+        "id": 16755865,
+        "variant_id": null,
+        "sku": null,
+        "name": "Mermelada Vino Carmenere",
+        "qty": 1,
+        "price": 7250.0,
+        "tax": 1157.563025210084,
+        "discount": 0.0,
+        "weight": 1.0,
+        "image": "https://images.jumpseller.com/store/fixlabs-dev/16755865/Vino_carmenere_1.jpg?1668617715",
+        "files": [],
+        "taxes": [
+          {
+            "id": 39645019,
+            "name": "IVA",
+            "rate": "19.0",
+            "fixed": false,
+            "amount": "1157.563",
+            "tax_on_product_price": true
+          }
+        ]
+      }
+    ],
+    "additional_fields": [
+      { "label": "Giro", "value": null, "id": 40966, "area": "shipping" },
+      {
+        "label": "Razón social",
+        "value": null,
+        "id": 40967,
+        "area": "shipping"
+      },
+      { "label": "Giro", "value": null, "id": 40966, "area": "billing" },
+      {
+        "label": "Razón social",
+        "value": null,
+        "id": 40967,
+        "area": "billing"
+      },
+      {
+        "label": "¿ Desea factura&nbsp;?",
+        "value": "No",
+        "id": 41315,
+        "area": "other"
+      }
+    ],
+    "shipping_taxes": [],
+    "source": {
+      "source_name": null,
+      "medium": null,
+      "campaign": null,
+      "referral_url": null,
+      "referral_code": null,
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36 OPR/95.0.0.0",
+      "first_page_visited": "https://fixlabs-dev.jumpseller.com/",
+      "first_page_visited_at": "2023-02-27 21:09:02 UTC",
+      "referral_source": "Directo"
+    },
+    "tracking_url": null,
+    "tracking_company": null,
+    "tracking_number": null,
+    "shipping_option": "delivery",
+    "same_day_delivery": false,
+    "shipment_status": "No Procesado",
+    "shipment_status_enum": "unfulfilled",
+    "external_shipping_rate_id": null
+  }
+}
